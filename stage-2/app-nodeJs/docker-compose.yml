@@ -1,0 +1,22 @@
+version: "2"
+services:
+  app-nodejs:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: app-nodejs
+    expose:
+      - 4000
+    ports:
+      - 4000:4000
+    depends_on:
+      - postgres
+    container_name: app-nodejs
+    env_file:
+      - .env.example
+  postgres:
+    image: postgres
+    expose:
+      - 5432
+    environment:
+      POSTGRES_PASSWORD: password
