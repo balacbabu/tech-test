@@ -48,3 +48,11 @@ npm run test
 ```sh
 npm run lint
 ```
+
+#### To run the application on a container:
+- Just run the below command:
+```
+docker-compose -f ./docker-compose.yml up -d
+```
+- goto 0.0.0.0:4000
+- Application starts now but throwing 404 API not found error. 
