@@ -18,6 +18,12 @@ npm i
 cp .env.example .env
 ```
 
+#### Run application in docker:
+```
+cd tech-test/stage-2/app-nodeJs
+docker-compose -f ./docker-compose.yml up -d
+```
+
 #### Start Postgres:
 ```sh
 docker run  -p 5432:5432 -e POSTGRES_PASSWORD=password -d postgres`
